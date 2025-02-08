@@ -1,0 +1,23 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Default Value{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% tailwind_css %}
+</head>
+<body class="bg-gray-100 p-4">
+    {% comment %} <nav class="bg-blue-500 text-white p-4 rounded mb-4 text-center">This is our navbar</nav> {% endcomment %}
+    
+    <div class="max-w-md mx-auto bg-white p-6 rounded shadow">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer class="bg-gray-200 text-gray-700 text-center p-4 mt-6">
+        © 2025 Bibekbhattarai14. All rights reserved.
+    </footer>
+</body>
+</html>
